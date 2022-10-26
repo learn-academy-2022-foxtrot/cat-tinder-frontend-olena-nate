@@ -18,7 +18,7 @@ const App = () => {
     <>
     <Header />
     <Routes>
-      <Route path = "/" element = {<Home />} />
+      <Route exact path = "/" element = {<Home />} />
       <Route path = "/catindex" element = {<CatIndex />} />
       <Route path = "/catshow" element = {<CatShow />} />
       <Route path = "/catnew" element = {<CatNew />} />
