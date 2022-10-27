@@ -1,4 +1,5 @@
 import React from "react" 
+import Jumbotron from "./Jumbotron"
 import NavBar from "./NavBar"
 
 
@@ -6,9 +7,8 @@ const Header = () => {
     return(
         <>
         <NavBar />
-        <h1 style = {{
-            textAlign: "center"
-        }}>Cat Tinder</h1>
+
+        <Jumbotron />
 
         </>
     )

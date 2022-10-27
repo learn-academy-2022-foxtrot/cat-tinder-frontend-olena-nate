@@ -17,14 +17,14 @@ const App = () => {
   return (
     <>
     <Header />
-    <Routes>
+    {/* <Routes>
       <Route exact path = "/" element = {<Home />} />
       <Route path = "/catindex" element = {<CatIndex />} />
       <Route path = "/catshow" element = {<CatShow />} />
       <Route path = "/catnew" element = {<CatNew />} />
       <Route path = "/catedit" element = {<CatEdit />} />
       <Route path = "*" element = {<NotFound />} />
-    </Routes>
+    </Routes> */}
     <Footer />
 
     </>

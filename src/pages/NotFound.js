@@ -13,7 +13,7 @@ const NotFound = () => {
          </h1>
           <img style = {{
             width: "100%"
-          }} src={notfound} /> 
+          }} src={notfound} />
          
         </>
     )
