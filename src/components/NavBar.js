@@ -1,36 +1,35 @@
 import React from "react"
-import logo from "../images/cat-tinder-logo.svg"
+import logo from "../images/tinder-logo.svg"
 
 const NavBar = () => {
 
   return (
-
-
-    <nav className="navbar navbar-expand-lg navbar-light bg-light  d-flex mb-3">
-      <div className="container-fluid justify-content-end">
-        <a className="navbar-brand " href="#">
+  
+    <nav className="navbar navbar-expand-lg d-flex " style={{backgroundColor: "#000000", marginBottom: "0"}} >
+       <a className="navbar-brand " href="#">
           <img style={{
             width: "400px",
             height: "80px"
           }} src={logo} />
         </a>
-        <ul className="nav justify-content-end">
+      <div className="container-fluid justify-content-end">
+       
+        <ul className="nav justify-content-end" style={{paddingBottom: "20px"}}>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/">Home</a>
+            <a className="nav-link active text-white" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/catindex">All Cats</a>
+            <a className="nav-link text-white" href="/catindex">All Cats</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/catnew">New Cat</a>
+            <a className="nav-link text-white" href="/catnew">New Cat</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/catedit">Edit Cat</a>
+            <a className="nav-link text-white" href="/catedit">Edit Cat</a>
           </li>
         </ul>
       </div>
     </nav>
-
 
   )
 }

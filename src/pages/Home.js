@@ -5,7 +5,7 @@ const Home = () => {
     return(
       <>
       <Jumbotron />
-       <h6>Home Page!</h6>  
+       {/* <h6>Home Page!</h6>   */}
      
       </>
              
