@@ -1,44 +1,47 @@
 import React from "react"
-import lawyer from "../images/lawyer-small.jpg"
-import greenEyes from "../images/green-eyes-small.jpg"
+import { NavLink } from "react-router-dom"
 
-const CatIndex = () => {
+const CatIndex = ({ cats }) => {
     return (
         <div class="container">
-            <div class="row"style={{justifyContent: "center", paddingTop: "50px", paddingBottom: "50px"}}>
-                <div class="col-sm-3">
+            {cats.map((cat, index) => {
+                return (
+
+            <div class="row"style={{
+                // justifyContent: "center",
+                // paddingTop: "50px",
+                // paddingBottom: "50px",
+                diplay: "flex",
+                // flexDirection: "row",
+                // flexWrap: "wrap",
+                float: "left",
+                padding: "0 10px",
+                // position: "relative"
+                width: "25%",
+                margin: "auto",
+                // marginTop: "100px",
+                
+                }}>
+                    
+                <div class="column">
               
-                    <div class="card">
-                        <img class="card-img-top" src={lawyer} alt="Card image cap"  />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
+                <div class="card">
+                    <img class="card-img-top" src={cat.image} alt="Picture of cat" />
+                    <div class="card-body">
+                        <h5 class="card-title">{cat.name}</h5>
+                        <p class="card-text">{cat.age}</p>
+                    </div>
+                
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
                     </div>
                     </div>
-                    <div class="col-sm-3">
-                    <div class="card">
-                        <img class="card-img-top" src={greenEyes} alt="Card image cap" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-3">
-                    <div class="card">
-                        <img class="card-img-top" src={greenEyes} alt="Card image cap" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+                    
                     </div>
                 
             </div>
+                )
+            })}
         </div>
 
     )
