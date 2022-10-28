@@ -1,15 +1,14 @@
 import React from "react"
 
 const Footer = () => {
-    return(
+    return (
 
-            <div className="container-fluid" style={{background: "#D6DBDF"}}>
-                <footer style={{width: "100%", height: "100px", textAlign: "center", color: "black", paddingTop: "40px", fontFamily: "native font stack", fontSize: "1.2em"}}>
+                <footer style={{ width: "100%", paddingBottom: "50px", textAlign: "center", color: "black", paddingTop: "50px", fontFamily: "Arial", fontSize: "1em",  background: "#D6DBDF", height: "150px", margin: "auto"}}>
                     Copyright &copy; 2022 | Nathaniel Ross-Loyo & Olena Zheliabina <br>
                     </br>
                 </footer>
-            </div>
-
+         
+       
     )
 }
 
