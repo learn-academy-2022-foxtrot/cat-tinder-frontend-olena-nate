@@ -1,50 +1,73 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText, Row, Col } from "reactstrap"
+
 
 const CatIndex = ({ cats }) => {
+
     return (
-        <div class="container">
+    <>
+     <h1 style={{
+                        textAlign: "center", paddingTop: "20px"
+                        }}
+                        >Meet the Cats</h1>
+        <main className="cat-index-cards">
+
             {cats.map((cat, index) => {
                 return (
-
-            <div class="row"style={{
-                // justifyContent: "center",
-                // paddingTop: "50px",
-                // paddingBottom: "50px",
-                diplay: "flex",
-                // flexDirection: "row",
-                // flexWrap: "wrap",
-                float: "left",
-                padding: "0 10px",
-                // position: "relative"
-                width: "25%",
-                margin: "auto",
-                // marginTop: "100px",
-                
-                }}>
-                    
-                <div class="column">
-              
-                <div class="card">
-                    <img class="card-img-top" src={cat.image} alt="Picture of cat" />
-                    <div class="card-body">
-                        <h5 class="card-title">{cat.name}</h5>
-                        <p class="card-text">{cat.age}</p>
-                    </div>
-                
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                    </div>
-                    </div>
-                    
-                    </div>
-                
-            </div>
+                    <Row>
+                        <Col sm="3">
+                            <Card
+                                style={{
+                                    width: '20rem'
+                                }}
+                                key={index}
+                            >
+                                <img
+                                    alt={`profile of a cat named ${cat.name}`} src={cat.image}
+                                />
+                                <CardBody>
+                                    <CardTitle tag="h5">
+                                        {cat.name}
+                                    </CardTitle>
+                                    <CardSubtitle
+                                        className="mb-2 text-muted"
+                                        tag="h6"
+                                    >
+                                        Age: {cat.age}
+                                    </CardSubtitle>
+                                    <CardText>
+                                        {cat.enjoys}
+                                    </CardText>
+                                    <NavLink to={`/catshow/${cat.id}`}><Button>
+                                        Open my profile
+                                    </Button>
+                                    </NavLink>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                    </Row>
                 )
-            })}
-        </div>
+            }
+
+            )
+            }
+        </main>
+        </>
 
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default CatIndex

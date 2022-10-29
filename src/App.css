@@ -1,6 +1,17 @@
+
+/* Cats Card from reactstrap goes here*/
 .card {
-    margin: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+ margin: 3rem 0;
+
+}
+
+.cat-index-cards {
+  
+  display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 30px; /*it adds space  20px between cards*/
+ padding: 30px;
+
+}
+

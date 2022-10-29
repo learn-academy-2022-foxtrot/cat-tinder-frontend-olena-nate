@@ -19,7 +19,7 @@ const App = () => {
     <Header />
     <Routes>
       <Route exact path = "/" element = {<Home />} />
-      <Route path = "/catindex" element = {<CatIndex cats={ cats }/>} />
+      <Route path = "/catindex" element = {<CatIndex cats={ cats } />} />
       <Route path = "/catshow/:id" element = {<CatShow cats={ cats } />} />
       <Route path = "/catnew" element = {<CatNew />} />
       <Route path = "/catedit" element = {<CatEdit />} />
