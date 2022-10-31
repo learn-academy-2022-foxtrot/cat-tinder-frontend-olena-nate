@@ -1,47 +1,68 @@
 import React from "react"
-import lawyer from "../images/lawyer-small.jpg"
-import greenEyes from "../images/green-eyes-small.jpg"
+import { NavLink } from "react-router-dom"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Row, Col } from "reactstrap"
 
-const CatIndex = () => {
+
+const CatIndex = ({ cats }) => {
+
     return (
-        <div class="container">
-            <div class="row"style={{justifyContent: "center", paddingTop: "50px", paddingBottom: "50px"}}>
-                <div class="col-sm-3">
-              
-                    <div class="card">
-                        <img class="card-img-top" src={lawyer} alt="Card image cap"  />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-3">
-                    <div class="card">
-                        <img class="card-img-top" src={greenEyes} alt="Card image cap" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-3">
-                    <div class="card">
-                        <img class="card-img-top" src={greenEyes} alt="Card image cap" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    </div>
-                
-            </div>
-        </div>
+        
+    <>
+    <h1
+        style={{
+            textAlign: "center",
+            paddingTop: "20px"
+        }}
+    >
+        Meet the Cats
+    </h1>
 
-    )
-}
+        <main className="cat-index-cards">
+
+            {cats?.map((cat, index) => {
+                return (
+                    <Row>
+                        <Col sm="3">
+                            <Card
+                                style={{
+                                    width: '20rem'
+                                    }}
+                                key={index}>
+                                <img
+                                    alt={`profile of a cat named ${cat.name}`} src={cat.image}/>
+                                <CardBody>
+                                    <CardTitle tag="h5">
+                                        {cat.name}
+                                    </CardTitle>
+                                    <CardSubtitle
+                                        className="mb-2 text-muted"
+                                        tag="h6">
+                                        Age: {cat.age}
+                                    </CardSubtitle>
+                                    <NavLink to={`/catshow/${cat.id}`}><Button>
+                                        Open my profile
+                                    </Button>
+                                    </NavLink>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                    </Row>
+                )
+            })}
+        </main>
+        </>
+        )}
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default CatIndex
