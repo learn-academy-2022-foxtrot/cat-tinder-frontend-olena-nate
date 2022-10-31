@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams } from "react-router-dom"
-import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText, Row, Col } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "reactstrap"
 import { NavLink } from "react-router-dom"
 
 

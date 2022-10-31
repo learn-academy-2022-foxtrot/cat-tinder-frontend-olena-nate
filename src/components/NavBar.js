@@ -6,11 +6,12 @@ const NavBar = () => {
   return (
   
     <nav className="navbar navbar-expand-lg d-flex " style={{backgroundColor: "#000000", marginBottom: "0"}} >
-       <a className="navbar-brand " href="#">
+       <a className="navbar-brand " href="/">
           <img style={{
             width: "400px",
             height: "80px"
-          }} src={logo} />
+          }} src={logo} 
+          alt="logo of cat tinder"/>
         </a>
       <div className="container-fluid justify-content-end">
        
