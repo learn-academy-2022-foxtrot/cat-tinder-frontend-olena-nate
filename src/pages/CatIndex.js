@@ -6,11 +6,17 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button, Row, Col } from "react
 const CatIndex = ({ cats }) => {
 
     return (
+        
     <>
-     <h1 style={{
-                        textAlign: "center", paddingTop: "20px"
-                        }}
-                        >Meet the Cats</h1>
+    <h1
+        style={{
+            textAlign: "center",
+            paddingTop: "20px"
+        }}
+    >
+        Meet the Cats
+    </h1>
+
         <main className="cat-index-cards">
 
             {cats?.map((cat, index) => {
@@ -20,7 +26,7 @@ const CatIndex = ({ cats }) => {
                             <Card
                                 style={{
                                     width: '20rem'
-                                }}
+                                    }}
                                 key={index}>
                                 <img
                                     alt={`profile of a cat named ${cat.name}`} src={cat.image}/>
@@ -42,15 +48,10 @@ const CatIndex = ({ cats }) => {
                         </Col>
                     </Row>
                 )
-            }
-
-            )
-            }
+            })}
         </main>
         </>
-
-    )
-}
+        )}
 
 
 

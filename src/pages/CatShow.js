@@ -10,10 +10,13 @@ const CatShow = ({ cats }) => {
     return (
         <>
 
-            <h1 style={{
-                        textAlign: "center", paddingTop: "20px"
-                        }}
-                        >Thank you for checking out my profile</h1>
+        <h1 style={{
+                textAlign: "center",
+                paddingTop: "20px"
+            }}
+        >
+            Thank you for checking out my profile
+        </h1>
 
             {showCat &&
 
@@ -21,19 +24,20 @@ const CatShow = ({ cats }) => {
                     <Card
                         style={{
                             width: '20rem'
-                        }}
+                            }}
                     >
+
                         <img
                             alt={`profile of a cat named ${showCat.name}`} src={showCat.image}
                         />
+
                         <CardBody>
                             <CardTitle tag="h5">
                                 {showCat.name}
                             </CardTitle>
                             <CardSubtitle
                                 className="mb-2 text-muted"
-                                tag="h6"
-                            >
+                                tag="h6">
                                 Age: {showCat.age}
                             </CardSubtitle>
                             <CardText>
@@ -46,11 +50,8 @@ const CatShow = ({ cats }) => {
                         </CardBody>
                     </Card>
                 </main>
-
             }
-
         </>
-    )
-}
+    )}
 
 export default CatShow
