@@ -25,9 +25,6 @@ const NavBar = () => {
           <li className="nav-item">
             <a className="nav-link text-white" href="/catnew">New Cat</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="/catedit">Edit Cat</a>
-          </li>
         </ul>
       </div>
     </nav>

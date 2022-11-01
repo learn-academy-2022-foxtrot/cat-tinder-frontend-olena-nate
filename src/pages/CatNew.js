@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import { Navigate } from "react-router-dom"
 import { Form, FormGroup, Label, Input, Button} from "reactstrap"
 import { useNavigate } from "react-router-dom"
 
@@ -24,7 +23,13 @@ const CatNew = ({ createCat}) => {
     }
     return (
         <>
-        <h1> Add a New Cat</h1>
+        <h1 style={{
+                textAlign: "center",
+                paddingTop: "20px"
+            }}
+        >
+        Add a New Cat
+        </h1>
             <Form>
                 <FormGroup>
                     <Label for="name">
@@ -32,7 +37,7 @@ const CatNew = ({ createCat}) => {
                     </Label>
                     <Input
                         name="name"
-                        placeholder="Please, enter your name"
+                        placeholder="Please enter your name here"
                         type="text"
                         onChange={ handleChange }
                         value={ newCat.name }
@@ -41,65 +46,15 @@ const CatNew = ({ createCat}) => {
                 
                 <FormGroup>
                     <Label for="age">
-                        Please, select your age
+                        Age
                     </Label>
                     <Input
                         name="age"
-                        type="select"
+                        type="number"
                         onChange={ handleChange }
                         value={ newCat.age }
                     >
-                        <option>
-                            1
-                        </option>
-                        <option>
-                            2
-                        </option>
-                        <option>
-                            3
-                        </option>
-                        <option>
-                            4
-                        </option>
-                        <option>
-                            5
-                        </option>
-                        <option>
-                            6
-                        </option>
-                        <option>
-                            7
-                        </option>
-                        <option>
-                            8
-                        </option>
-                        <option>
-                            9
-                        </option>
-                        <option>
-                            10
-                        </option>
-                        <option>
-                            11
-                        </option>
-                        <option>
-                            12
-                        </option>
-                        <option>
-                            13
-                        </option>
-                        <option>
-                            14
-                        </option>
-                        <option>
-                            15
-                        </option>
-                        <option>
-                            16
-                        </option>
-                        <option>
-                            17
-                        </option>
+                        
                     </Input>
                 </FormGroup>
                 
@@ -121,7 +76,7 @@ const CatNew = ({ createCat}) => {
                     </Label>
                     <Input
                         name="image"
-                        placeholder="Please, link your photo"
+                        placeholder="Please link your profile photo here"
                         type="url"
                         onChange={ handleChange }
                         value={ newCat.image }
