@@ -64,7 +64,6 @@ const App = () => {
       .then((response) => response.json())
       .then((payload) => readCat())
       .catch((errors) => console.log("Delete errors:", errors))
-      .finally(() => readCat())
   }
 
 
