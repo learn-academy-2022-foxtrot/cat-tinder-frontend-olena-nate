@@ -24,7 +24,7 @@ const CatShow = ({ cats, deleteCat }) => {
 
             {showCat &&
 
-                <main className="cat-index-cards">
+                <main className="cat-index-cards profile-card">
                     <Card
                         style={{
                             width: '20rem'
@@ -45,7 +45,7 @@ const CatShow = ({ cats, deleteCat }) => {
                                 Age: {showCat.age}
                             </CardSubtitle>
                             <CardText>
-                                {showCat.enjoys}
+                                Hobby: {showCat.enjoys}
                             </CardText>
                             <NavLink to={`/catedit/${showCat.id}`} className="nav-link">
                                 <Button>
