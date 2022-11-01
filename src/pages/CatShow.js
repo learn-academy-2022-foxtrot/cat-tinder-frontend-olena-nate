@@ -2,14 +2,17 @@ import React from "react"
 import { useParams } from "react-router-dom"
 import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "reactstrap"
 import { NavLink } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 const CatShow = ({ cats, deleteCat }) => {
+    const navigate = useNavigate()
     const { id } = useParams()
     let showCat = cats?.find((cat) => cat.id === +id)
 
     const handleDelete = () => {
         deleteCat(id)
+        navigate("/catindex")
     }
     return (
         <>
@@ -53,11 +56,9 @@ const CatShow = ({ cats, deleteCat }) => {
                                 </Button>
                             </NavLink>   
                             <p></p>
-                            <NavLink to="/catindex">
                                 <Button onClick={handleDelete}>
                                 Delete Cat Profile
                                 </Button>
-                            </NavLink> 
                             <p></p>   
                             <NavLink to={`/catindex`}>
                                 <Button>
