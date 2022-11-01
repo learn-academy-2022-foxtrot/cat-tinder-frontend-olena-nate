@@ -4,9 +4,13 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "react
 import { NavLink } from "react-router-dom"
 
 
-const CatShow = ({ cats }) => {
+const CatShow = ({ cats, deleteCat }) => {
     const { id } = useParams()
     let showCat = cats?.find((cat) => cat.id === +id)
+
+    const handleDelete = () => {
+        deleteCat(id)
+    }
     return (
         <>
 
@@ -20,7 +24,7 @@ const CatShow = ({ cats }) => {
 
             {showCat &&
 
-                <main className="cat-index-cards">
+                <main className="cat-index-cards profile-card">
                     <Card
                         style={{
                             width: '20rem'
@@ -41,12 +45,25 @@ const CatShow = ({ cats }) => {
                                 Age: {showCat.age}
                             </CardSubtitle>
                             <CardText>
-                                {showCat.enjoys}
+                                Hobby: {showCat.enjoys}
                             </CardText>
-                            <NavLink to={`/catindex`}><Button>
+                            <NavLink to={`/catedit/${showCat.id}`} className="nav-link">
+                                <Button>
+                                Edit Cat Profile
+                                </Button>
+                            </NavLink>   
+                            <p></p>
+                            <NavLink to="/catindex">
+                                <Button onClick={handleDelete}>
+                                Delete Cat Profile
+                                </Button>
+                            </NavLink> 
+                            <p></p>   
+                            <NavLink to={`/catindex`}>
+                                <Button>
                                 Back to all cats
-                            </Button>
-                            </NavLink>         
+                                </Button>
+                            </NavLink>  
                         </CardBody>
                     </Card>
                 </main>

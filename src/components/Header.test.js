@@ -27,9 +27,6 @@ describe("<Header>", () => {
         userEvent.click(screen.getByText("New Cat"))
         expect(screen.getByText("New Cat")).toBeInTheDocument()
 
-        userEvent.click(screen.getByText("Edit Cat"))
-        expect(screen.getByText("Edit Cat")).toBeInTheDocument()
-
         userEvent.click(screen.getByText("Home"))
         expect(screen.getByText("Home")).toBeInTheDocument()
 

@@ -15,7 +15,7 @@ const NavBar = () => {
         </a>
       <div className="container-fluid justify-content-end">
        
-        <ul className="nav justify-content-end" style={{paddingBottom: "20px"}}>
+        <ul className="nav justify-content-end" style={{paddingBottom: "20px", paddingRight: "20px", fontWeight: "450"}}>
           <li className="nav-item">
             <a className="nav-link active text-white" aria-current="page" href="/">Home</a>
           </li>
@@ -24,9 +24,6 @@ const NavBar = () => {
           </li>
           <li className="nav-item">
             <a className="nav-link text-white" href="/catnew">New Cat</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="/catedit">Edit Cat</a>
           </li>
         </ul>
       </div>
